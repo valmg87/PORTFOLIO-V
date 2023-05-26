@@ -1,0 +1,84 @@
+
+:root {
+--header-color:dark gray;
+    --main-text-color: black;
+    --main-link-color:dark blue;
+}
+
+*{
+    font: 'Times Roman', sans-serif;
+    font: 'LUCIDA', sans-serif;
+    box-sizing:border-box;
+}
+.header {
+    /* Created a gradient effect to surround the h1 and navbar */
+    color-scheme: (to top, black)
+    /* Setting the header color to white by referencing variable */
+    color: var(--header-color);
+}
+.header h1 {
+    /* Setting basic properties for the text inside the top header.     */
+    display: inline-block;
+    font-size: 2.25em;
+    color: var(--header-color);
+}
+.header nav {
+
+    float: right;
+    padding-top:20px;
+}
+.header nav ul {
+    display:flex;
+}
+
+  /* The flex section is meant to hold the 2 main columns for Joe's info. */
+  .flex-container {
+    /* Needs to be flex, or it will stack.  Also creating space at the bottom for the next section. */
+    display: flex;
+    padding-bottom: 3%;
+}
+  .flex-left {
+    /* Need to set this to a small portion to give the info plenty of room.  Bold also (700). */
+    width: 30%;
+    font-size: 2em;
+    font-weight: 700;
+}
+.flex-right {
+    /* Set a border to the left for separation, and add padding.  Give the remainder of the screen to the right flex. */
+    width: 70%;
+    padding-left: 5%;
+    border-left: solid;
+}
+.flex-right p {
+    /* Keeping theme, make the text color red. */
+    color:blue;
+}
+.flex-right ul {
+/* 
+    Set the link stylings, bigger, bold font.  90% width to leave space on the right edge.
+    Create space between the links, and also ensure they are in a row and not stacked.
+*/
+    font-size: 1.25em;
+    font-weight: 700;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+    .flex-right li a {
+        /* Set the link colors and turn off underlining.  Give it a border. */
+        color: var(--main-link-color);
+        text-decoration: none;
+        border: solid 8px;
+        border-color: black;
+        background-color: darkred;
+    }
+    
+    
+    .flex-right ul li a {
+        justify-content: center;
+        display:flex;
+        width:200px;
+        text-align: center;
+
+    }
